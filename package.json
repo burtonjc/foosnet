@@ -1,0 +1,48 @@
+{
+  "name": "y",
+  "description": "y",
+  "version": "0.1.0",
+  "homepage": "",
+  "author": {
+    "name": "Aaron Flower",
+    "email": "aaronpflower@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "y"
+  },
+  "bugs": {
+    "url": ""
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "/blob/master/LICENSE-MIT"
+    }
+  ],
+  "main": "module",
+  "engines": {
+    "node": "~= 0.10.0"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "dependencies": {
+    "connect-cachify": "*",
+    "winston": "*",
+    "winston-request-logger": "*",
+    "jade": "*",
+    "nconf": "*",
+    "express": "*",
+    "uglify-js": "*",
+    "uglifycss": "*"
+  },
+  "devDependencies": {
+    "grunt": "~0.3.17",
+    "grunt-express-server": "^0.4.19",
+    "grunt-simple-mocha": "~0.2.0",
+    "mocha": "~1.6.0",
+    "should": "~1.2.0"
+  },
+  "keywords": []
+}
