@@ -10,19 +10,6 @@ module.exports = function(grunt) {
         jshintrc: '.jshintrc'
       }
     },
-    
-    watch: {
-      test: {
-        files: [
-          'server/**/*[Ss]pec.js',
-          'Gruntfile.js'
-        ],
-        options: {
-          reporter: 'Dot'
-        },
-        tasks: 'test'
-      }
-    },
 
     mochaTest: {
       server: {
