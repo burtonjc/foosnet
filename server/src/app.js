@@ -1,12 +1,11 @@
 var express = require('express'),
-    app = express();
+    app = express(),
+    AppRoutesHandler = require('./handlers/app-routes');
 
-app.get('/', function(req, res, next) {
-    res.send("its working");
-});
+app.set('views', __dirname + '/../views');
+app.set('view engine', 'jade');
+app.engine('jade', require('jade').__express);
 
-app.get('/other-route', function(req, res, next) {
-    res.send("what about now with nodemon");
-});
+app.get('/', AppRoutesHandler.renderApp);
 
 module.exports = app;
