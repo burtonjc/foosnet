@@ -29,8 +29,10 @@
     "test": "grunt test"
   },
   "dependencies": {
+    "colors": "^1.0.3",
     "express": "^4.10.2",
-    "jade": "^1.7.0"
+    "jade": "^1.7.0",
+    "mongoose": "^3.8.19"
   },
   "keywords": [],
   "devDependencies": {
