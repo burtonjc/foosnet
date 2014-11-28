@@ -1,14 +1,13 @@
-var AppRoutesHandler = require('../../src/handlers/app-routes'),
-    sinon = require('sinon');
+var AppRoutesHandler = require('../../src/handlers/app-routes');
 
 describe('app-routes', function() {
   describe('#renderApp', function() {
     it('renders index.html', function() {
       var req = {},
           res = {
-            render: sinon.stub()
+            render: this.stub()
           },
-          next = sinon.stub()
+          next = this.stub()
 
       AppRoutesHandler.renderApp(req, res, next);
 

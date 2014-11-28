@@ -25,6 +25,7 @@ module.exports = function(grunt) {
                 },
                 src: [
                     'server/spec/spec-global.js',
+                    'server/spec/spec-helper.js',
                     'server/spec/**/*[Ss]pec.js'
                 ]
             }
