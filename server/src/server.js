@@ -5,7 +5,7 @@ var app = require('./app'),
     server;
 
 process.env.PORT = process.env.PORT || 2001;
-
+models.connect();
 server = app.listen(process.env.PORT, function() {
     var host = server.address().address,
         port = server.address().port;
