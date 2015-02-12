@@ -7,7 +7,10 @@ html(lang="en" ng-app)
         link(rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css")
         script(src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular.min.js")
     body
+
         ng-include(src="'/navigation.html'")
+
+        <a href="/auth/google">Sign In with Google</a>
         ng-include(src="'/carousel.html'")
         ng-include(src="'/mainContent.html'")
         ng-include(src="'/footer.html'")
