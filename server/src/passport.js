@@ -1,13 +1,21 @@
-var passport = require('passport')
-    , GoogleStrategy = require('passport-google').Strategy;
+var passport = require('passport'),
+    GoogleStrategy = require('passport-google-oauth').OAuth2Strategy,
+    baseUri;
+
+if(process.env.NODE_ENV === 'production') {
+    baseUri = 'https://footsnet.herokuapp.com';
+} else {
+    baseUri = 'http://localhost:2001';
+}
 
 passport.use(new GoogleStrategy({
-    returnURL: 'http://www.foosnet.com/auth/google/return',
-    realm: 'http://www.foosnet.com'
-    },
-    function(identifier, profile, done) {
-        User.findOrCreate({ openId: identifier }, function(err, user) {
-            done(err, user);
-        })
-    }
-));
+    callbackURL: baseUri + '/auth/google/callback',
+    clientID: process.env.FOOSNET_GOOGLE_CLIENT_ID,
+    clientSecret: process.env.FOOSNET_GOOGLE_CLIENT_SECRET
+}, function(accessToken, refreshToken, profile, done) {
+    console.log(profile);
+    done(null, profile);
+    // User.findOrCreate({ openId: identifier }, function(err, user) {
+    //     done(err, user);
+    // });
+}));
