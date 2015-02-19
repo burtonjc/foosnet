@@ -10,6 +10,14 @@ app.engine('jade', require('jade').__express);
 app.use('/js', express.static(__dirname + '/../../client/src'));
 app.use(express.static(__dirname + '/../../client/partials'));
 
+app.use(require('cookie-parser')());
+app.use(require('body-parser').json());
+app.use(require('cookie-session')({
+  secret: process.env.FOOSNET_SESSION_SECRET || 'SuperSecretCookieSecret'
+}));
+app.use(passport.initialize());
+app.use(passport.session());
+
 app.get('/', AppRoutesHandler.renderApp);
 
 //Redirect the user to Google for authentication.  When complete, Google
