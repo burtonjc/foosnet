@@ -7,9 +7,10 @@ html(lang="en" ng-app)
         link(rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css")
         script(src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular.min.js")
     body
-        .container
-            h1#title Welcome to Jade
+        ng-include(src="'/navigation.html'")
+        ng-include(src="'/carousel.html'")
+        ng-include(src="'/mainContent.html'")
+        ng-include(src="'/footer.html'")
 
-            label Name:
-            input(type="text", ng-model="yourName", placeholder="Enter a name here")
-            h1(ng-if="yourName") Hello {{yourName}}!
+
+        script(src="/js/application.js")
