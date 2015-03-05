@@ -13,7 +13,6 @@ passport.use(new GoogleStrategy({
     clientID: process.env.FOOSNET_GOOGLE_CLIENT_ID,
     clientSecret: process.env.FOOSNET_GOOGLE_CLIENT_SECRET
 }, function(accessToken, refreshToken, profile, done) {
-    console.log(profile);
     done(null, profile);
     // User.findOrCreate({ openId: identifier }, function(err, user) {
     //     done(err, user);

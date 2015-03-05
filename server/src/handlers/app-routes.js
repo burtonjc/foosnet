@@ -1,7 +1,13 @@
 module.exports = {
   renderApp: function(req, res, next) {
-    res.render('index', {
-        user: req.user
-    });
+    var options= {
+      session: {}
+    }
+
+    if (req.user) {
+      options.session.user = req.user
+    }
+
+    res.render('index', options);
   }
 }
