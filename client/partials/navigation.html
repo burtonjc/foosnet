@@ -1,5 +1,5 @@
 <div class="navbar-wrapper" ng-controller="NavigationController as controller">
-{{user}}
+
   <div class="container">
 
     <nav class="navbar navbar-inverse navbar-static-top">
@@ -29,6 +29,21 @@
                 <li><a href="#">Separated link</a></li>
                 <li><a href="#">One more separated link</a></li>
               </ul>
+            </li>
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown" ng-if="user">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                <!-- <img class="img-rounded" ng-href="user._json.picture" /> -->
+                {{user.dispalyName}}
+              </a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="/logout">Logout</a></li>
+              </ul>
+            </li>
+            <li ng-if="!user">
+              <a class="btn btn-danger" href="/auth/google" role="button">Sign In with Google</a>
             </li>
           </ul>
         </div>
