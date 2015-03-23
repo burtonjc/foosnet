@@ -1,3 +1,3 @@
 module.exports =
-  renderApp: (next) ->
+  renderApp: ->
     @body = yield @render 'index'
