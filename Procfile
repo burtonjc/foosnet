@@ -1,1 +1,1 @@
-web: node server/src/server.js
+web: coffee --nodejs --harmony server/src/server.coffee
