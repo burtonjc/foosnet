@@ -1,24 +1,25 @@
 doctype html
+
 html(lang="en" ng-app="application")
-    head
-        title FoosNet
-        script(src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js")
-        script(src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js")
-        link(rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css")
+  head
+    title FoosNet
+    script(src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js")
+    script(src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js")
+    link(rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css")
 
-        script.
-            var Application = {
-                session: !{JSON.stringify(session)}
-            };
+    script.
+      var Application = {
+        session: !{JSON.stringify(session)}
+      };
 
-    body
-        ng-include(src="'/navigation.html'")
+  body
+    ng-include(src="'/navigation.html'")
 
-        ng-include(src="'/carousel.html'")
-        ng-include(src="'/mainContent.html'")
-        ng-include(src="'/footer.html'")
+    ng-include(src="'/carousel.html'")
+    ng-include(src="'/mainContent.html'")
+    ng-include(src="'/footer.html'")
 
-        script(src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular.min.js")
-        script(src="/js/application.js")
-        script(src="/js/services/application.js")
-        script(src="/js/controllers/navigation.js")
+    script(src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular.min.js")
+    script(src="/js/application.js")
+    script(src="/js/services/application.js")
+    script(src="/js/controllers/navigation.js")
