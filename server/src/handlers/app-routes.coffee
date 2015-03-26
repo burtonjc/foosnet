@@ -1,12 +1,8 @@
 module.exports =
   renderApp: ->
-    # var options= {
-    #   session: {}
-    # }
+    options= session: {}
 
-    # if (req.user) {
-    #   options.session.user = req.user
-    # }
+    if @passport.user
+      options.session.user = @passport.user
 
-
-    @body = yield @render 'index'
+    @body = yield @render 'index', options

@@ -1,8 +1,8 @@
+process.env.PORT ?=  2001
+
 require 'colors'
 app = require './app'
 models = require './models'
-
-process.env.PORT = process.env.PORT || 2001
 
 models.connect()
 

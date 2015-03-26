@@ -34,9 +34,8 @@
 
           <ul class="nav navbar-nav navbar-right">
             <li class="dropdown" ng-if="user">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                <!-- <img class="img-rounded" ng-href="user._json.picture" /> -->
-                {{user.dispalyName}}
+              <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                <img class="img-circle" ng-href="{{user._json.picture}}" />
               </a>
               <ul class="dropdown-menu" role="menu">
                 <li><a href="/logout">Logout</a></li>
