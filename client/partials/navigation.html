@@ -25,22 +25,8 @@
               </ul>
             </li>
             <li ng-if="!user">
-                <a class="btn btn-block btn-social btn-google-plus" color="#DD4B39" href="/auth/google">
-                <i class="fa fa-google-plus"></i>Sign In with Google</a>
-            </li>
-          </ul>
-
-          <ul class="nav navbar-nav navbar-right">
-            <li class="dropdown" ng-if="user">
-              <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                <img class="img-circle" ng-href="{{user._json.picture}}" />
-              </a>
-              <ul class="dropdown-menu" role="menu">
-                <li><a href="/logout">Logout</a></li>
-              </ul>
-            </li>
-            <li ng-if="!user">
-              <a class="btn btn-danger" href="/auth/google" role="button">Sign In with Google</a>
+              <a class="btn btn-block btn-social btn-google-plus" color="#DD4B39" href="/auth/google">
+              <i class="fa fa-google-plus"></i>Sign In with Google</a>
             </li>
           </ul>
         </div>
