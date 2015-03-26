@@ -6,6 +6,7 @@ describe 'app-routes', ->
     it 'renders index.html', ->
       context =
         render: @sinon.stub().withArgs('index').resolves 'index file contents'
+        passport: {}
 
       yield AppRoutesHandler.renderApp.apply context
 
