@@ -50,7 +50,8 @@
     "passport-google-oauth": "^0.1.5",
     "passport-oauth1": "^1.0.1",
     "passport-twitter": "^1.0.3",
-    "q": "^1.2.0"
+    "q": "^1.2.0",
+    "request": "^2.54.0"
   },
   "keywords": [],
   "devDependencies": {
