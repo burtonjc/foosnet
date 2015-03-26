@@ -7,7 +7,7 @@ passport.deserializeUser (user, done) ->
   done null, user
 
 if process.env.NODE_ENV is 'production'
-  baseUri = 'https://footsnet.herokuapp.com'
+  baseUri = 'https://foosnet.herokuapp.com'
 else
   baseUri = "http://localhost:#{process.env.PORT}"
 
