@@ -48,6 +48,8 @@
     "mongoose": "^3.8.19",
     "passport-facebook": "^2.0.0",
     "passport-google-oauth": "^0.1.5",
+    "passport-oauth1": "^1.0.1",
+    "passport-twitter": "^1.0.3",
     "q": "^1.2.0"
   },
   "keywords": [],

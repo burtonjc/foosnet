@@ -29,3 +29,11 @@ passport.use new FacebookStrategy
   (accessToken, refreshToken, profile, done) ->
     done null, profile
 
+TwitterStrategy = require('passport-twitter').Strategy
+passport.use new TwitterStrategy
+  consumerKey: process.env.FOOSNET_TWITTER_CONSUMER_KEY
+  consumerSecret: process.env.FOOSNET_TWITTER_CONSUMER_SECRET
+  callbackURL: "#{baseUri}/auth/twitter/callback"
+,
+  (token, tokenSecret, profile, done) ->
+    done null, profile
