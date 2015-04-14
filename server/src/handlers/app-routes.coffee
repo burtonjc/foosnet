@@ -4,5 +4,6 @@ module.exports =
 
     if @passport.user
       options.session.user = @passport.user
-
-    @body = yield @render 'index', options
+      @body = yield @render 'index', options
+    else
+        @body = yield @render 'landing', options
