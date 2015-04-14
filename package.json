@@ -20,12 +20,13 @@
       "url": "/blob/master/LICENSE-MIT"
     }
   ],
-  "main": "module",
+  "main": "server/src/server.coffee",
   "engines": {
     "node": "~= 0.12.0"
   },
   "scripts": {
-    "start": "nodemon --harmony server/src/server.coffee",
+    "start": "nodemon --harmony",
+    "debug": "nodemon --exec 'coffee --nodejs \"--harmony --debug\" server/src/server.coffee'",
     "test": "node --harmony ./node_modules/.bin/grunt test",
     "watch": "node --harmony ./node_modules/.bin/grunt watch"
   },
