@@ -19,3 +19,21 @@ passport.use new GoogleStrategy
 ,
   (accessToken, refreshToken, profile, done) ->
     done null, profile
+
+FacebookStrategy = require('passport-facebook').Strategy
+passport.use new FacebookStrategy
+  clientID: process.env.FOOSNET_FACEBOOK_APP_ID
+  clientSecret: process.env.FOOSNET_FACEBOOK_APP_SECRET
+  callbackURL: "#{baseUri}/auth/facebook/callback"
+,
+  (accessToken, refreshToken, profile, done) ->
+    done null, profile
+
+TwitterStrategy = require('passport-twitter').Strategy
+passport.use new TwitterStrategy
+  consumerKey: process.env.FOOSNET_TWITTER_CONSUMER_KEY
+  consumerSecret: process.env.FOOSNET_TWITTER_CONSUMER_SECRET
+  callbackURL: "#{baseUri}/auth/twitter/callback"
+,
+  (token, tokenSecret, profile, done) ->
+    done null, profile

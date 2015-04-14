@@ -14,7 +14,7 @@ app
   .use require('koa-static')("#{__dirname}/../../client/partials")
   .use require('koa-log4js')()
   .use require('koa-bodyparser')()
-  .use require('koa-session')(app)
+  .use require('koa-sess')(app)
   .use passport.initialize()
   .use passport.session()
   .use router.routes()
