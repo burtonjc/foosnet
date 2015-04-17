@@ -1,31 +1,33 @@
 <div class="navbar-wrapper" ng-controller="NavigationController as controller">
-
-  <div class="container">
-    <nav class="navbar navbar-inverse navbar-static-top">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <a class="navbar-brand" href="#">FoosNet</a>
+  <nav class="navbar navbar-inverse navbar-static-top">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#">FoosNet</a>
+          </div>
         </div>
-        <div id="navbar" class="navbar-collapse collapse">
-
-          <ul class="nav navbar-nav navbar-left">
-            <li class="active"><a href="#">Home</a></li>
-          </ul>
-
+        <div class="col-md-3">
+          <div id="navbar" class="navbar-collapse collapse">
+            <p class="navbar-brand text-center">FoosNet</p>
+          </div>
+        </div>
+        <div class="col-md-3">
           <ul class ="nav navbar-nav navbar-right">
-            <li ng-if="user">
-              <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                <img class="img-rounded" style="width: 18px; height: 18px" ng-src="{{user._json.picture}}"/>
-                  {{user.displayName}}
-                <span class="caret"></span>
-              </a>
-              <ul class="dropdown-menu" role="menu">
-                <li><a href="/logout">Logout</a></li>
-              </ul>
-            </li>
-          </ul>
+          <li ng-if="user">
+            <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+              <img class="img-circle" style="width: 40px; height: 40px" ng-src="{{user._json.picture}}"/>
+                {{user.displayName}}
+              <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="/logout">Logout</a></li>
+            </ul>
+          </li>
+        </ul>
         </div>
       </div>
-    </nav>
-  </div>
+      </div>
+    </div>
+  </nav>
 </div>
