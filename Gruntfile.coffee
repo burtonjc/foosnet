@@ -28,7 +28,14 @@ module.exports = (grunt) ->
           'server/spec/**/*[Ss]pec.coffee'
         ]
 
+    less:
+      build:
+        files:
+          './client/css/main.css': './client/styles/**/*.less'
+
+
   grunt.loadNpmTasks 'grunt-contrib-jshint'
+  grunt.loadNpmTasks 'grunt-contrib-less'
   grunt.loadNpmTasks 'grunt-contrib-watch'
   grunt.loadNpmTasks 'grunt-mocha-test'
 
