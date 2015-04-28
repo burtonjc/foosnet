@@ -7,7 +7,8 @@ html(lang="en" ng-app="application")
     script(src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js")
     link(rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css")
     link(rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css")
-    link(rel="stylesheet" type="text/css" href="../../client/css/global.css")
+    link(rel="stylesheet" type="text/css" href="/custom.css")
+    link(type="img/jpg" href="/img")
     meta(name="viewport" content="width=device-width, initial-scale=1")
 
     script.
@@ -18,7 +19,7 @@ html(lang="en" ng-app="application")
   body
 
     ng-include(src="'/navigation.html'")
-    ng-include(src="'/mainContent.html'")
+    ng-include(src="'/main-content.html'")
     ng-include(src="'/footer.html'")
 
     script(src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular.min.js")
