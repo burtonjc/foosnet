@@ -12,6 +12,8 @@ app
   .use require('koa-render')("#{__dirname}/../views", 'jade')
   .use require('koa-static')("#{__dirname}/../../client/src")
   .use require('koa-static')("#{__dirname}/../../client/partials")
+  .use require('koa-static')("#{__dirname}/../../client/css")
+  .use require('koa-static')("#{__dirname}/../../client/img")
   .use require('koa-log4js')()
   .use require('koa-bodyparser')()
   .use require('koa-sess')(app)
